@@ -1,4 +1,4 @@
-# AngularRedditClone
+# Angular Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 
@@ -22,6 +22,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## License
+This program is free software published under the terms of the GNU [Lesser General Public License](http://www.gnu.org/copyleft/lesser.html). <br/>
+You can freely use it for commercial and non-commercial projects.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Suggestions are welcomed. Happy Coding and may God bless you. 😇
