@@ -53,10 +53,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     //Since userDetailsService is an interface we wil create an implementation class called
     //UserDetailsServiceImpl in service package
     @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
+    public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder.userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());
     }
+
 
     //The method below is used for encrypting passwords.
     // We use Bean annotation as the PasswordEncoder is an interface and return an instance of
