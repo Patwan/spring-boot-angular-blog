@@ -23,9 +23,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
 
-
-
-
     @Bean(BeanIds.AUTHENTICATION_MANAGER)
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -54,7 +51,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     //Inside it we reach out to userDetailsService interface which is used for loading User data from
     //different sources as seen in readme2.md and provide user data to Spring.
     //Since userDetailsService is an interface we wil create an implementation class called
-    //UserDetailsServiceImpl in service package
+    //UserDetailsServiceImpl in service package.
+    //Since the data is already loaded in userDetailsService (via our custom class called UserDetailsServiceImpl)
+    //we will pass in the userDetailsService as a variable and then the passwordEncoder that is used
+    //for encrypting paswords.
     @Autowired
     public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder.userDetailsService(userDetailsService)

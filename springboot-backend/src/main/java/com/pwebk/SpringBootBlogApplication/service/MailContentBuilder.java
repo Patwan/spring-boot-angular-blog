@@ -6,7 +6,8 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
 
-@Service@AllArgsConstructor
+@Service
+@AllArgsConstructor
 public class MailContentBuilder {
 
     //We bring TemplateEngine dependency on board

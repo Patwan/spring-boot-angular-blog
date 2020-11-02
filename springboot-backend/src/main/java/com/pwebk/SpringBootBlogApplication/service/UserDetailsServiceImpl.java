@@ -34,6 +34,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     //JPA works with repositories. Hence we will create a package called repository and create a class
     //called Userrepository. UserRepository will connect with user entity (inside the models package).
 
+    //Inside the loaduserByUserName method we reach out to userRepository and then its custom method called
+    //findByUsername and pas the username as the parameter. We then store it in a vraiable called userOptional
+    //which is Optional (Optional object is used to represent null with absent value) and is of type User.
+
+    //If the user is not found we return an exception/error. We use orElaseThrow method and inside it pass
+    // a custom message.
+
+    //If the User is found we crrate another object (which is a wrapper). This is called User class and is provided
+    //by the Spring framework and is part of userdetails interface. In this class we map the userDetails to the
+    //User class. We also provide an authority called simpleGrantedAuthority for the role called User.
+    //getAuthorities is a cllback function (has an access modifier called private).
+
 
     // The class below takes username as input and returns UserDetails
     //object. Inside the method we require the UserRepository to retrieve user details based on username.

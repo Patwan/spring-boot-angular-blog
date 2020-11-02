@@ -40,17 +40,19 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final JwtProvider jwtProvider;
 
-    //This method is responsible for registering a user, we pass in RegisterRequest
-    // (data transfer object responsible for passing data throughout our application).
-    // Next we instantiate the User entity. We then use the setter methods to map
-    //data from RegisterRequest object to the User entity.
+    //This method is responsible for registering a user and persisting data in a database
+    // table, we pass in RegisterRequest dto (data transfer object that is holding the registerpayload
+    // after being added from the controller).
+    //The return Type of the method is null meaning its returning nothing.
+    // Inside the method we instantiate the User entity (an enity is used to hold data
+    // temporalily for storage. It only holds data but does not store).
+    // We then use the setter methods to map data from RegisterRequest dto object to the User entity.
     //Before saving the password, we MUST encode it using a hashing algorithm. We use Bcrypt algorithym
     //that is provided by Spring security. We will add this in SecurityConfig class
-    // Next we save the user to database via UserRepository.
-    //Next we invoke the method that generates a token
+    // Next we save the user entity to database via UserRepository (uses JPA ORM).
+    //Next we invoke the private method that generates a token
     //Finally we invoke MailService class and call te sendMail method. In this method we instantiate
-    //NotificationEmail entity and pass in the Subject, recipient and body parameters as defined in
-    //the entity.
+    //NotificationEmail entity and pass in the message that wil be send via mail and pass the token
     public void signup(RegisterRequest registerRequest){
         User user = new User();
         user.setUsername(registerRequest.getUsername());

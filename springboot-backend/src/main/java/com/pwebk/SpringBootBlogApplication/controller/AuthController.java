@@ -17,9 +17,16 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
-    //We use postMapping Spring web annotation (this means the method will take in a post request and signup url)
-    // Invoke the signup method from authService class and pass in RegisterRequest dto(Data Transfer
-    // Object)
+    //This signup method is responsible for authentication (registering a user).
+    //Once data comes it we map the data to RegisterRequest dto (data transfer object which holds
+    //the data temporalily and the data can be reused by different components).
+
+    //It has has @PostMapping Spring web annotation means its a POST request.
+    //The Return type is ResponseEnity of type String. ResponseEntity is meant to represent the entire
+    // HTTP response.you can control anything that goes into it: status code, headers, and body.
+
+    //Inside the method we reach out to authService and then its method called signup and pass
+    //the registerRequest dto (data transfer object) that contains payload.
     //Once we register, we return status by instantiating ResponseEntity class and pass in the body
     //and Status Code(Ok meaning 200)
     @PostMapping("/signup")
