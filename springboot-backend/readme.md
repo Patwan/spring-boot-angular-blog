@@ -3,13 +3,16 @@ A starter project for creation of a **CRUD application** using Java Spring Boot 
 We have views to create, read and update products in a MySQL database.
 
 # Application Dependencies
-These are found in te pom.xml file.
+We will use the following backend maven dependencies as listed in pom.xml.
 
-* Spring Boot 2.3.1 Java Frameowrk <br/>
-* Thymeleaf templating engine for the views <br/>
-* Spring Data JPA, We use JPA Repository on the data access layer <br/>
-* MySQL Driver Connector <br/>
-* Spring DevTools e.g lombok to reduce boilerplate code
+* spring-boot-starter-web - Web dependency that preinstalls a Tomcat server <br/>
+* spring-boot-starter-thymeleaf - templating engine for the views <br/>
+* spring-boot-starter-data-jpa - Data access layer for our MySQL database <br/>
+* mysql-connector-java - For connecting to MySQL database <br/>
+* spring-boot-starter-mail - Java Package for sending emails <br/>
+* Spring DevTools e.g lombok to reduce boilerplate code <br/>
+* Spring Security framework for Authentication </br>
+* jjwt-api - Package used for authorization
 
 # Installation
 * Clone the project.  **git clone project-name**  <br/>
