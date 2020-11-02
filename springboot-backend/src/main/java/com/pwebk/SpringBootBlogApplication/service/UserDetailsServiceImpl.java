@@ -22,7 +22,20 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    //Learn more about Spring Security. The class below takes username as input and returns UserDetails
+    //This class primary role is implementing UserDetailsService Spring security Interface. An interface
+    //contains abstract methods (which dont have a body) hence we add the logic when implemting the interface.
+    // TO overide a method you press Ctrl + O inside the class.
+    //The method has a method called loadUserByUsername whose return type in UserDetails (thi is part
+    // of Spring Security framework). This means that Spring Security will accept UserDetails object
+    //as its return type.
+    //The method takes in username parameter as a parameter. Thie means Spring Security pass to us the
+    //username and it expects us to return the User based on that username.
+    //Inside the method we will reach out to mysql database. To achieve this we have to use JPA.
+    //JPA works with repositories. Hence we will create a package called repository and create a class
+    //called Userrepository. UserRepository will connect with user entity (inside the models package).
+
+
+    // The class below takes username as input and returns UserDetails
     //object. Inside the method we require the UserRepository to retrieve user details based on username.
     //If the suer does not exist we throw a UsernameNotFoundExeption that is provided by Spring.
     //Next, we the object we create another object (this is a warpper) with the same name User. This class
