@@ -12,6 +12,9 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface SubredditMapper {
 
+    //This class uses MapStruct library as seen in our importation. Read the documentation
+    //in mapstruct.org
+
     @Mapping(target = "numberOfPosts", expression = "java(mapPosts(subreddit.getPosts()))")
     SubredditDto mapSubredditToDto(Subreddit subreddit);
 

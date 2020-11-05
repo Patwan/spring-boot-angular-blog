@@ -9,10 +9,12 @@ We will use the following backend maven dependencies as listed in pom.xml.
 * spring-boot-starter-thymeleaf - templating engine for the views <br/>
 * spring-boot-starter-data-jpa - Data access layer for our MySQL database <br/>
 * mysql-connector-java - For connecting to MySQL database <br/>
+* lombok - Package for generating boilerplate code e.g getters and setters at runtime <br>
 * spring-boot-starter-mail - Java Package for sending emails <br/>
 * Spring DevTools e.g lombok to reduce boilerplate code <br/>
 * Spring Security framework for Authentication </br>
-* jjwt-api - Package used for authorization
+* jjwt-api - Package used for authorization <br>
+* mapstruct - Package used for generating mapping logic automatically at compile time
 
 # Installation
 * Clone the project.  **git clone project-name**  <br/>
