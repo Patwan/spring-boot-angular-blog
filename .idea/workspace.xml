@@ -11,6 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="042a0158-0604-450f-baaf-601e9d5ccb71" name="Default Changelist" comment="Added Comment Controller and Service feature">
+      <change afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/dto/PostRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/dto/PostResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/controller/CommentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/controller/CommentsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
