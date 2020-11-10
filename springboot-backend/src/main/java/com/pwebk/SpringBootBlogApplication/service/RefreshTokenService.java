@@ -15,7 +15,12 @@ import java.util.UUID;
 @Transactional
 public class RefreshTokenService {
 
+    //This class implements the logic to manage our Refresh Tokens.
+
     private final RefreshTokenRepository refreshTokenRepository;
+
+    //The first method we have is generateRefreshToken() which creates a random 128 bit UUID String and we are using that as our token.
+    // We are setting the createdDate as Instant.now(). And then we are saving the token to our MySQL Database.
 
     public RefreshToken generateRefreshToken() {
         RefreshToken refreshToken = new RefreshToken();
@@ -25,11 +30,15 @@ public class RefreshTokenService {
         return refreshTokenRepository.save(refreshToken);
     }
 
+    // we have validateRefreshToken() which queries the DB with the given token. If the token is not found it throws an Exception with message
+    // – “Invalid refresh Token”
+
     void validateRefreshToken(String token) {
         refreshTokenRepository.findByToken(token)
                 .orElseThrow(() -> new SpringRedditException("Invalid refresh Token"));
     }
 
+    //we have deleteRefreshToken() which as name suggests deletes the refresh token from the database.
     public void deleteRefreshToken(String token) {
         refreshTokenRepository.deleteByToken(token);
     }

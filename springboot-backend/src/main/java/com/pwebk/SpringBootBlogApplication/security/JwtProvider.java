@@ -22,6 +22,13 @@ import static java.util.Date.from;
 @Service
 public class JwtProvider {
 
+    //first thing you can observe is we have introduced the field jwtExpirationInMillis which is being injected with property value
+    // jwt.expiration.time which is set to 900000 ms (15 minutes)
+
+    //We convert this expiration time which is in milliseconds to Date and passing that value to the setExpiration() while generating the JWT.
+
+    //We are also exposing the jwtExpirationInMillis field using the getJwtExpirationInMillis() method.
+
     private KeyStore keyStore;
     @Value("${jwt.expiration.time}")
     private Long jwtExpirationInMillis;

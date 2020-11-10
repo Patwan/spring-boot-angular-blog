@@ -8,6 +8,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostResponse {
+    //When the user queries the Post API to get a single post or all posts.
+    // We have to also provide the vote information along with post details.
+
+    //We added 3 new fields inside the PostResponse.java class – voteCount,
+    // commentCount, duration
     private Long id;
     private String postName;
     private String url;
