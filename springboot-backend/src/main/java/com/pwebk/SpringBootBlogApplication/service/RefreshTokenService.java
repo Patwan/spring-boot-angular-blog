@@ -23,6 +23,10 @@ public class RefreshTokenService {
     // We are setting the createdDate as Instant.now(). And then we are saving the token to our MySQL Database.
 
     public RefreshToken generateRefreshToken() {
+
+        //Instantiate the RefreshToken model to be an object, we then reach out to setter methods and setToken (random 128 bit UUID and convert
+        // to a string). We also set the createdDate using setCreatedDate setter method. Finally we save the instantiated model object with its values
+        //to teh database table
         RefreshToken refreshToken = new RefreshToken();
         refreshToken.setToken(UUID.randomUUID().toString());
         refreshToken.setCreatedDate(Instant.now());
@@ -38,7 +42,8 @@ public class RefreshTokenService {
                 .orElseThrow(() -> new SpringRedditException("Invalid refresh Token"));
     }
 
-    //we have deleteRefreshToken() which as name suggests deletes the refresh token from the database.
+    //we have deleteRefreshToken() which as name suggests deletes the refresh token from the database. We call deleteByToken method
+    //inside refreshTokenRepository
     public void deleteRefreshToken(String token) {
         refreshTokenRepository.deleteByToken(token);
     }
