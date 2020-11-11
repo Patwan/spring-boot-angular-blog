@@ -131,6 +131,8 @@ public class AuthService {
         return new AuthenticationResponse(token, loginRequest.getUsername());
     }
 
+    //Pass the refreshToken request and inside the method, validate it on the refreshTokenService (we pass the refreshToken
+    // that is already inside refreshToken request)
     public AuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest) {
         refreshTokenService.validateRefreshToken(refreshTokenRequest.getRefreshToken());
         String token = jwtProvider.generateTokenWithUserName(refreshTokenRequest.getUsername());
