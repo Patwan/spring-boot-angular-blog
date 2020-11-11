@@ -2,6 +2,7 @@ package com.pwebk.SpringBootBlogApplication.service;
 
 import com.pwebk.SpringBootBlogApplication.dto.AuthenticationResponse;
 import com.pwebk.SpringBootBlogApplication.dto.LoginRequest;
+import com.pwebk.SpringBootBlogApplication.dto.RefreshTokenRequest;
 import com.pwebk.SpringBootBlogApplication.dto.RegisterRequest;
 import com.pwebk.SpringBootBlogApplication.exceptions.SpringRedditException;
 import com.pwebk.SpringBootBlogApplication.model.NotificationEmail;
@@ -132,7 +133,7 @@ public class AuthService {
     }
 
     //Pass the refreshToken request and inside the method, validate it on the refreshTokenService (we pass the refreshToken
-    // that is already inside refreshToken request)
+    // that is already inside refreshTokenRequest dto). We then pass
     public AuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest) {
         refreshTokenService.validateRefreshToken(refreshTokenRequest.getRefreshToken());
         String token = jwtProvider.generateTokenWithUserName(refreshTokenRequest.getUsername());
