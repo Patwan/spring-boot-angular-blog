@@ -19,11 +19,14 @@ export class AuthService {
     refreshToken: this.getRefreshToken(),
     username: this.getUserName()
   }
-
+  
+  //Bring on board the http class from Angular
   constructor(private httpClient: HttpClient,
     private localStorage: LocalStorageService) {
   }
 
+  //The return type of this method is an Observable of type any. This means it will
+  //return a promise hence we can listen to the promise wehn calling this method
   signup(signupRequestPayload: SignupRequestPayload): Observable<any> {
     return this.httpClient.post('http://localhost:8080/api/auth/signup', signupRequestPayload, { responseType: 'text' });
   }
