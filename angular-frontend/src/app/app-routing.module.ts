@@ -10,6 +10,7 @@ import { ViewPostComponent } from './post/view-post/view-post.component';
 import { UserProfileComponent } from './auth/user-profile/user-profile.component';
 import { AuthGuard } from './auth/auth.guard';
 
+//Used for routing and mapping the URLs to respective components
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'view-post/:id', component: ViewPostComponent },
