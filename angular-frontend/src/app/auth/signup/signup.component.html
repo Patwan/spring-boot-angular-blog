@@ -7,6 +7,8 @@
                     <h4>Register</h4>
                 </div>
                 <div class="card-body">
+                    <!-- The ng-submit directive specifies a function to run when the form is submitted. 
+                    We invoke signup method tht is in typescript file od this component-->
                     <form [formGroup]="signupForm" (ngSubmit)="signup()">
                         <div class="form-group row">
                             <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
