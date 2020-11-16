@@ -31,6 +31,10 @@ export class AuthService {
     return this.httpClient.post('http://localhost:8080/api/auth/signup', signupRequestPayload, { responseType: 'text' });
   }
 
+  //In this login method, we pass in loginRequestPayload variable(of type LoginRequestPayload
+  //model that holds data that was set in the logic file) and teh return Type is an
+  //Observable of type boolean. Inside the method we reach out to httpClient variable(whose
+  //type is Angular HttpClient) and then post of type LoginResponse.
   login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {
     return this.httpClient.post<LoginResponse>('http://localhost:8080/api/auth/login',
       loginRequestPayload).pipe(map(data => {

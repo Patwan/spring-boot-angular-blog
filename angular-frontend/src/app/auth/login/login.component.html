@@ -5,6 +5,7 @@
             <div class="card">
                 <div class="card-header" style="text-align: center"><h4>Login</h4></div>
                 <div class="card-body">
+                    {% comment %} Maps to the login method in typescript once a user submits this form {% endcomment %}
                     <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <div class="form-group row">
                             <label for="user_name" class="col-md-4 col-form-label text-md-right">Username</label>
