@@ -16,6 +16,9 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class MailService {
 
+    //Create mailSender and mailContentBuilder variables. They have a keyword of final meaning
+    //their values cannot be changed, they also have a private keyword meaning they can
+    //only be accessed inside this class.
     private final JavaMailSender mailSender;
     private final MailContentBuilder mailContentBuilder;
 
@@ -45,6 +48,8 @@ public class MailService {
             messageHelper.setSubject(notificationEmail.getSubject());
             messageHelper.setText(mailContentBuilder.build(notificationEmail.getBody()));
         };
+        //Use Java Exceptions to try and catch any exceptions,  in the code below if the email is
+        //not sent we catch teh error in catch block (MailException),, we also logs the details
         try {
             mailSender.send(messagePreparator);
             log.info("Activation email sent!!");
