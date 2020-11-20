@@ -21,6 +21,7 @@ export class AuthService {
   }
   
   //Bring on board the http class from Angular
+  //The constructor method is called 1st when the class is instantiated
   constructor(private httpClient: HttpClient,
     private localStorage: LocalStorageService) {
   }
