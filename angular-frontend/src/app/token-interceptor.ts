@@ -10,6 +10,9 @@ import { LoginResponse } from './auth/login/login-response.payload';
 })
 export class TokenInterceptor implements HttpInterceptor {
 
+    //This class modifies each request going out to the backend server. This is by adding
+    //the token to the header. Notice that this class implements HttpInterceptor. 
+
     isTokenRefreshing = false;
     refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject(null);
 
