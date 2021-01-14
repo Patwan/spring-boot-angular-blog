@@ -51,13 +51,7 @@ public class CommentService {
                 .stream()
                 .map(commentMapper::mapToDto).collect(toList());
     }
-
-    //This method returns a List which is of type CommentsDto (Java Generics). Inside the method we
-    //query the user table (via userRepository) by the username that was passed(if there are any errors
-    // we propagate/throw the errors) and store the result in a user variable of type User entity.
-    //Next we use CommentRepository to find all users then we straem the response. After the result
-    //we map the response as CommentsDto object (to eneable it fit teh return type of this method).
-    //We then convert the result into a List
+    
     public List<CommentsDto> getAllCommentsForUser(String userName) {
         User user = userRepository.findByUsername(userName)
                 .orElseThrow(() -> new UsernameNotFoundException(userName));

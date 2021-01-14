@@ -38,7 +38,7 @@ public class AuthService {
     private MailService mailService;
     private final AuthenticationManager authenticationManager;
     private final JwtProvider jwtProvider;
-    
+
     public void signup(RegisterRequest registerRequest){
         User user = new User();
         user.setUsername(registerRequest.getUsername());
@@ -76,13 +76,6 @@ public class AuthService {
         return token;
     }
 
-    //In thus method we pass the token we pass from AuthController, we then pass it to
-    // verificationTokenRepository and invoke findByToken method and pass in the token.
-    //We assign it to a variable of type VerificationToken and this is optional.
-    //Incase the entity does not exits we can call orElseThrow method and throw the custom exception
-    //with message as invalid token.
-    //If the token exists, we have to quesry the user who is associated with this token and enable that
-    //user. We invoke the method and pass in the token
     public void verifyAccount(String token) {
         Optional<VerificationToken> verificationToken =verificationTokenRepository.findByToken(token);
         verificationToken.orElseThrow(() -> new SpringRedditException("Invalid Token"));
