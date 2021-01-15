@@ -9,7 +9,7 @@ import org.thymeleaf.context.Context;
 @Service
 @AllArgsConstructor
 public class MailContentBuilder {
-    
+
     private final TemplateEngine templateEngine;
 
 

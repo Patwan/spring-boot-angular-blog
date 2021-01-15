@@ -16,28 +16,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class MailService {
 
-    //Create mailSender and mailContentBuilder variables. They have a keyword of final meaning
-    //their values cannot be changed, they also have a private keyword meaning they can
-    //only be accessed inside this class.
     private final JavaMailSender mailSender;
     private final MailContentBuilder mailContentBuilder;
-
-    //The method sendMail is void meaning it returns nothing. Passing NotificationEmail entity as a
-    //parameter. Inside the method we construct an instance of MimeMessageHelper inside the lambda.
-    //This creates an instance of MimeMessagePreparator
-    //To the MimeMessageHelper we are passing the following: setFrom (Email origin), setTo (Email Destination),
-    //setSubject (subject of the email), setText (email body).
-    //For the setText method we are calling the build method of mailContentBuilder, this method will
-    //return the message in HTML format.
-
-    //Lastly we use send method of Java MailSender class in the try bock, if sent we log a message as activation
-    //email sent.
-
-    //For log, we define Sl4J from lombok annotation, which creates an instance of SL4J logger object and inject
-    //it into our class.
-
-    //Inside the catch bock we throw the errors in SpringRedditException (class found in
-    // exceptions pckage) withe the message.
 
     @Async
     void sendMail(NotificationEmail notificationEmail){
