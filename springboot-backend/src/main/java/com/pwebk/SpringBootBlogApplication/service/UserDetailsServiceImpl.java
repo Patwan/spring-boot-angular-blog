@@ -21,39 +21,7 @@ import static java.util.Collections.singletonList;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
-
-    //This class primary role is implementing UserDetailsService Spring security Interface. An interface
-    //contains abstract methods (which dont have a body) hence we add the logic when implemting the interface.
-    // TO overide a method you press Ctrl + O inside the class.
-    //The method has a method called loadUserByUsername whose return type in UserDetails (thi is part
-    // of Spring Security framework). This means that Spring Security will accept UserDetails object
-    //as its return type.
-    //The method takes in username parameter as a parameter. Thie means Spring Security pass to us the
-    //username and it expects us to return the User based on that username.
-    //Inside the method we will reach out to mysql database. To achieve this we have to use JPA.
-    //JPA works with repositories. Hence we will create a package called repository and create a class
-    //called Userrepository. UserRepository will connect with user entity (inside the models package).
-
-    //Inside the loaduserByUserName method we reach out to userRepository and then its custom method called
-    //findByUsername and pas the username as the parameter. We then store it in a vraiable called userOptional
-    //which is Optional (Optional object is used to represent null with absent value) and is of type User.
-
-    //If the user is not found we return an exception/error. We use orElaseThrow method and inside it pass
-    // a custom message.
-
-    //If the User is found we crrate another object (which is a wrapper). This is called User class and is provided
-    //by the Spring framework and is part of userdetails interface. In this class we map the userDetails to the
-    //User class. We also provide an authority called simpleGrantedAuthority for the role called User.
-    //getAuthorities is a cllback function (has an access modifier called private).
-
-
-    // The class below takes username as input and returns UserDetails
-    //object. Inside the method we require the UserRepository to retrieve user details based on username.
-    //If the suer does not exist we throw a UsernameNotFoundExeption that is provided by Spring.
-    //Next, we the object we create another object (this is a warpper) with the same name User. This class
-    //is provided by Spring framework which implements UserDetails interface, here we map UserDetails to User
-    //class. Lastly we provide an authority called as simple granted authority for a role called User.
-    //This is now the core part of User Authentication. Learn more about Spring Security
+    
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) {
