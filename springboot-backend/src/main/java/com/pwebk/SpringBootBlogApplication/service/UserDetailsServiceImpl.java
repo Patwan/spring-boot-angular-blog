@@ -21,7 +21,7 @@ import static java.util.Collections.singletonList;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
-    
+
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) {

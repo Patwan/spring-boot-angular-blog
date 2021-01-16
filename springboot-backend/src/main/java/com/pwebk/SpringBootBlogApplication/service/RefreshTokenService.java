@@ -34,9 +34,6 @@ public class RefreshTokenService {
         return refreshTokenRepository.save(refreshToken);
     }
 
-    // we have validateRefreshToken() which queries the DB with the given token. If the token is not found it throws an Exception with message
-    // – “Invalid refresh Token”
-
     void validateRefreshToken(String token) {
         refreshTokenRepository.findByToken(token)
                 .orElseThrow(() -> new SpringRedditException("Invalid refresh Token"));
