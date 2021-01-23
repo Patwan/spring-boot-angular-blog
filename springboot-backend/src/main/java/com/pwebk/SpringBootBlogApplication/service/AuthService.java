@@ -90,7 +90,7 @@ public class AuthService {
         user.setEnabled(true);
         userRepository.save(user);
     }
-    
+
     public AuthenticationResponse login(LoginRequest loginRequest) {
         Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 loginRequest.getUsername(),
@@ -101,9 +101,7 @@ public class AuthService {
         String token = jwtProvider.generateToken(authenticate);
         return new AuthenticationResponse(token, loginRequest.getUsername());
     }
-
-    //Pass the refreshToken request and inside the method, validate it on the refreshTokenService (we pass the refreshToken
-    // that is already inside refreshTokenRequest dto). We then pass
+    
     public AuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest) {
         refreshTokenService.validateRefreshToken(refreshTokenRequest.getRefreshToken());
         String token = jwtProvider.generateTokenWithUserName(refreshTokenRequest.getUsername());
