@@ -82,12 +82,6 @@ public class AuthService {
         fetchUserAndEnable(verificationToken.get());
     }
 
-    //In this method we pass in the verificationToken we got in the method above, inside the method we
-    //take the token then reach out to the user (we did relationship in the model of ONE TO ONE meaning
-    // each user has a token) then fetch the username of the User.
-    //Next we reach out to the userRepository and find by tye username we got. If there is an error
-    //we throw custom error.
-    //Next we set Enabled column to true of the user whose token matched, finally we save the user.
     @Transactional
     private void fetchUserAndEnable(VerificationToken verificationToken) {
         String username = verificationToken.getUser().getUsername();
@@ -96,9 +90,7 @@ public class AuthService {
         user.setEnabled(true);
         userRepository.save(user);
     }
-
-    //This method will contain logic to create UsernamePassword AuthenticationToken.Then use AuthenticationManager
-    //to perform login. To do that we autowire AuthenticationManager into AuthService class at te top.
+    
     public AuthenticationResponse login(LoginRequest loginRequest) {
         Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 loginRequest.getUsername(),
