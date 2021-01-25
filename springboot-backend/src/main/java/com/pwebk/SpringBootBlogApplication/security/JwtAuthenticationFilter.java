@@ -19,17 +19,6 @@ import java.io.IOException;
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    // This custome class intercepts all incoming JWT requests. It retrieves the access token
-    // and validates it. If teh validation is successful the request will be forwarded to the
-    //corresponding controller.
-    //Inside it we override some methods (these are part of OnceperRequestFilter interface that is
-    // part of Spring framework).
-    //In the doFilterIntervnal method (its returnType is void meaning it is NOT RETURNING ANYTHING)
-    //we will intercept the request and fetch the token. This is because
-    //the client sends a request to the server as part of the headers. Inside it we call another
-    //private method called getJwtFomRequest that retrieves the token and return it.
-    //Next we pass the token to JWTprovider calss to validate it.
-
     @Autowired
     private JwtProvider jwtProvider;
     private UserDetailsService userDetailsService;

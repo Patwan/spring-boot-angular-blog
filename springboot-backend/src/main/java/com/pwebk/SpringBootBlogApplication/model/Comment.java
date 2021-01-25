@@ -25,13 +25,11 @@ public class Comment {
     @NotEmpty
     private String text;
 
-    //Reference to Post entity with a ManytoOne relationship
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name="postId", referencedColumnName = "postId")
     private Post post;
     private Instant createdDate;
-
-    //Reference to User entity with a ManytoOne relationship
+    
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name="userId", referencedColumnName = "userId")
     private User user;
