@@ -35,14 +35,13 @@ public class Post {
     @Lob
     private String description;
     private Integer voteCount;
-    
+
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "userId" , referencedColumnName = "userId")
     private User user;
-    //It will store the actual date
+
     private Instant createdDate;
 
-    //Reference to subreddit entity and a join
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "id", referencedColumnName = "id")
     private Subreddit subreddit;
