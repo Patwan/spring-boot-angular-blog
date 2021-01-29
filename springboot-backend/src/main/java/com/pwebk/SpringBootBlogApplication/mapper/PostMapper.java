@@ -18,21 +18,7 @@ import static com.pwebk.SpringBootBlogApplication.model.VoteType.UPVOTE;
 
 @Mapper(componentModel = "spring")
 public abstract class PostMapper {
-
-    //Now we have to update our PostMapper.java class to map also these new additional fields.
-    // One advantage of creating this PostMapper.java is now our mapping logic is decoupled from the actual business logic.
-
-    //instead of updating PostService.java class with this logic, we can just change the interface to abstract class and inject the needed
-    // dependencies into our class to fill the new field’s information.
-
-    //You can observe that the voteCount is set to a constant value – 0. This is because whenever we want to create a new Post object,
-    // we set the default vote count as 0.
-
-    //When mapping from Post to PostResponse, we explicitly need to map only the fields commentCount (handled through commentCount() method)
-    // and duration (handled through getDuration())
-
-    //The getDuration() is using a library called TimeAgo. This is a java library that shows us the dates in the relative Time Ago format.
-
+    
     @Autowired
     private CommentRepository commentRepository;
     @Autowired

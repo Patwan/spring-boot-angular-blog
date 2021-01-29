@@ -12,8 +12,9 @@
   <component name="ChangeListManager">
     <list default="true" id="042a0158-0604-450f-baaf-601e9d5ccb71" name="Default Changelist" comment="Added Comment Controller and Service feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/model/Subreddit.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/model/Subreddit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/mapper/PostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/model/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/model/Vote.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

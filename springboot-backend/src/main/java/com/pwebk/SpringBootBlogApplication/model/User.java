@@ -34,6 +34,5 @@ public class User {
 
     private Instant created;
 
-    //The user is enabled after completing email verification
     private boolean enabled;
 }

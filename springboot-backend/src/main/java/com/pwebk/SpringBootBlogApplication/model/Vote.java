@@ -21,8 +21,6 @@ public class Vote {
     private Long voteId;
     private VoteType voteType;
 
-    //Reference to the Post and User entities and both of them have Many To One
-    //relationship
     @NotNull
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name ="postId" , referencedColumnName = "postId")
