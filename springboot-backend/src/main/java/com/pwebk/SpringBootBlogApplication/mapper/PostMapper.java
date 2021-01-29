@@ -18,7 +18,7 @@ import static com.pwebk.SpringBootBlogApplication.model.VoteType.UPVOTE;
 
 @Mapper(componentModel = "spring")
 public abstract class PostMapper {
-    
+
     @Autowired
     private CommentRepository commentRepository;
     @Autowired
