@@ -11,8 +11,6 @@ import java.time.Instant;
 @NoArgsConstructor
 public class AuthenticationResponse {
 
-    //Enhance our login functionality so that it includes the generated Refresh Token inside the AuthenticationResponse.
-
     private String authenticationToken;
     private String username;
     private Instant expiresAt;

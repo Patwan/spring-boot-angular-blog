@@ -11,8 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="042a0158-0604-450f-baaf-601e9d5ccb71" name="Default Changelist" comment="Added Comment Controller and Service feature">
-      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/mapper/PostMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/mapper/SubredditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/mapper/SubredditMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
