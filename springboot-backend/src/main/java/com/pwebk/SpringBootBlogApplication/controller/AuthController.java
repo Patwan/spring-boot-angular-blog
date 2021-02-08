@@ -29,10 +29,7 @@ public class AuthController {
         authService.verifyAccount(token);
         return new ResponseEntity<>("Account activated successfully", HttpStatus.OK);
     }
-
-    //This method is responsible for login in a user, we pass LoginRquest dto (data transfer object) that
-    //holds username and password.
-    //Inside it we reach out to login method that is part of authservice and pass in the loginRequest.
+    
     @PostMapping("/login")
     public AuthenticationResponse login(@RequestBody LoginRequest loginRequest){
         return authService.login(loginRequest);
