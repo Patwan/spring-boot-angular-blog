@@ -18,13 +18,7 @@ public class SubredditController {
 
     private final SubredditService subredditService;
 
-    //This createSubreddit method is responsible for creating a Subreddit
-    //Its return type is ReponseEntity of type Subredditdto.  ResponseEntity is meant to represent the entire
-    //HTTP response.you can control anything that goes into it: status code, headers, and body.
-    //Once data comes it we map the data to SubredditDto dto (data transfer object which holds
-    //the data temporalily and the data can be reused by different components).
-
-    //It has has @PostMapping Spring web annotation means its a POST request..
+   
     @PostMapping
     public ResponseEntity<SubredditDto> createSubreddit(@RequestBody SubredditDto subredditDto){
         return ResponseEntity.status(HttpStatus.CREATED)
