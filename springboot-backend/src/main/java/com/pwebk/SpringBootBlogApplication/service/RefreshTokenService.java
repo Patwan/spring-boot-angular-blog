@@ -15,8 +15,6 @@ import java.util.UUID;
 @Transactional
 public class RefreshTokenService {
 
-    //This class implements the logic to manage our Refresh Tokens.
-
     private final RefreshTokenRepository refreshTokenRepository;
     
 
