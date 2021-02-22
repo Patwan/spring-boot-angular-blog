@@ -11,7 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="042a0158-0604-450f-baaf-601e9d5ccb71" name="Default Changelist" comment="Added Comment Controller and Service feature">
-      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/service/RefreshTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/service/RefreshTokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/com/pwebk/SpringBootBlogApplication/service/MailService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaTechie-MicroServices-tutorial/cloud-gateway" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Angular-Spring-Employee-Management-App/backend" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -96,25 +97,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added Comment Controller and Service feature" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604646684853">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1613711594504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604646684853" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1611577795800">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1611577795800" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1604651609024">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604651609024" />
-    <state x="0" y="0" width="585" height="728" key="find.popup" timestamp="1604651490313">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604651490313" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604650796525">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604650796525" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613711594504" />
   </component>
 </project>
